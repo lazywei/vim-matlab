@@ -4,15 +4,15 @@
 "		Original authors: Mario Eusebio and Preben Guldberg
 " Last Change:	2008 Oct 16 : added try/catch/rethrow and class statements
 " 		2008 Oct 28 : added highlighting for most of Matlab functions
-" 		2009 Nov 23 : added 'todo' keyword in the matlabTodo keywords 
+" 		2009 Nov 23 : added 'todo' keyword in the matlabTodo keywords
 " 		(for doxygen support)
 
 " For version 5.x: Clear all syntax items
 " For version 6.x: Quit when a syntax file was already loaded
 if version < 600
-  syntax clear
+	syntax clear
 elseif exists("b:current_syntax")
-  finish
+	finish
 endif
 
 syn keyword matlabStatement		return function
@@ -98,11 +98,11 @@ syn keyword matlabFunc 			datestr logical num2hex str2mat
 "String Creation
 syn keyword matlabFunc 			blanks
 "String Identification
-syn keyword matlabFunc 			isletter isspace isstrprop validatestring 
+syn keyword matlabFunc 			isletter isspace isstrprop validatestring
 "String Manipulation
 syn keyword matlabFunc 			deblank lower upper
 "String Parsing
-syn keyword matlabFunc 			regexpi regexprep regexptranslate strfind strtok 
+syn keyword matlabFunc 			regexpi regexprep regexptranslate strfind strtok
 "String Evaluation
 syn keyword matlabFunc 			evalc evalin
 "String Comparison
@@ -120,15 +120,15 @@ syn keyword matlabFunc addpref getappdata getpref ginput guide inspect isappdata
 "User Interface Objects
 syn keyword matlabFunc uibuttongroup uicontextmenu uicontrol uimenu uipanel uipushtool uitoggletool uitoolbar menu
 "Finding Objects from Callbacks
-syn keyword matlabFunc findall findfigs findobj gcbf gcbo 
+syn keyword matlabFunc findall findfigs findobj gcbf gcbo
 "GUI Utility Functions
 syn keyword matlabFunc align getpixelposition listfonts selectmoveresize setpixelposition textwrap uistack
 "Controlling Program Execution
-syn keyword matlabFunc uiresume uiwait	
+syn keyword matlabFunc uiresume uiwait
 "Basic Plots and Graphs
 syn keyword matlabFunc box errorbar hold  loglog  plot plot3 plotyy polar semilogx semilogy subplot
 "Plotting Tools
-syn keyword matlabFunc figurepalette pan plotbrowser plotedit plottools propertyeditor rotate3d  showplottool zoom 
+syn keyword matlabFunc figurepalette pan plotbrowser plotedit plottools propertyeditor rotate3d  showplottool zoom
 
 "Annotating Plots
 syn keyword matlabFunc annotation clabel datacursormode datetick gtext legend  line rectangle texlabel title xlabel ylabel zlabel
@@ -137,11 +137,11 @@ syn keyword matlabFunc area bar barh bar3 bar3h pareto pie pie3
 "Contour Plots
 syn keyword matlabFunc contour contour3  contourc contourf ezcontour ezcontourf
 "Direction and Velocity Plots
-syn keyword matlabFunc comet comet3 compass feather quiver quiver3 
+syn keyword matlabFunc comet comet3 compass feather quiver quiver3
 "Discrete Data Plots
 syn keyword matlabFunc stairs stem stem3
 "Function Plots
-syn keyword matlabFunc ezmesh ezmeshc ezplot ezplot3 ezpolar ezsurf ezsurfc fplot 
+syn keyword matlabFunc ezmesh ezmeshc ezplot ezplot3 ezpolar ezsurf ezsurfc fplot
 "Histograms
 syn keyword matlabFunc hist histc rose
 "Polygons and Surfaces
@@ -153,12 +153,12 @@ syn keyword matlabFunc getframe im2frame movie  noanimate
 "Bit-Mapped Images
 syn keyword matlabFunc frame2im image imagesc imfinfo imformats imread imwrite ind2rgb
 "Printing
-syn keyword matlabFunc frameedit hgexport orient print printopt saveas 
+syn keyword matlabFunc frameedit hgexport orient print printopt saveas
 "Handle Graphics
 syn keyword matlabFunc allchild ancestor copyobj delete gca gco get ishandle propedit set
-"Object 
+"Object
 syn keyword matlabFunc axes figure hggroup hgtransform light patch
-"root object	
+"root object
 syn keyword matlabFunc surface text
 "Plot Objects
 syn keyword matlabFunc clf close closereq drawnow gcf hgload hgsave newplot opengl refresh
@@ -168,61 +168,61 @@ syn keyword matlabFunc axis cla grid ishold makehgtform
 syn keyword matlabFunc linkaxes linkprop refreshdata
 "Data analysis
 "Basic Operations
-syn keyword matlabFunc brush cumprod cumsum linkdata prod sort sortrows sum 
+syn keyword matlabFunc brush cumprod cumsum linkdata prod sort sortrows sum
 "Descriptive Statistics
 syn keyword matlabFunc corrcoef cov max mean median min mode std var
 "Filtering and Convolution
-syn keyword matlabFunc conv2 convn detrend filter filter2 
+syn keyword matlabFunc conv2 convn detrend filter filter2
 "Interpolation and Regression
 syn keyword matlabFunc interp1 interp2 interp3 interpn mldivide mrdivide
 "Fourier Transforms
 syn keyword matlabFunc fft fft2 fftn fftshift fftw ifft ifft2 ifftn ifftshift
 "Derivatives and Integrals
-syn keyword matlabFunc cumtrapz del2 diff gradient trapz 
+syn keyword matlabFunc cumtrapz del2 diff gradient trapz
 "File Operations
 syn keyword matlabFunc cd copyfile dir fileattrib filebrowser isdir lookfor ls matlabroot mkdir movefile pwd recycle rehash rmdir toolboxdir type what
 "Operating System Interface
 syn keyword matlabFunc clipboard computer dos getenv hostid maxNumCompThreads perl setenv system unix winqueryreg
 "MATLAB Version and License
-syn keyword matlabFunc ismac ispc isstudent isunix javachk license prefdir usejava ver verLessThan version 
+syn keyword matlabFunc ismac ispc isstudent isunix javachk license prefdir usejava ver verLessThan version
 "Basic Information
-syn keyword matlabFunc disp display isempty issparse length ndims numel size 
+syn keyword matlabFunc disp display isempty issparse length ndims numel size
 "Elementary Matrices and Arrays
-syn keyword matlabFunc blkdiag diag eye freqspace ind2sub linspace logspace meshgrid ndgrid ones rand randn sub2ind 
+syn keyword matlabFunc blkdiag diag eye freqspace ind2sub linspace logspace meshgrid ndgrid ones rand randn sub2ind
 "Array Operations
-syn keyword matlabFunc accumarray bsxfun cross dot kron tril triu 
+syn keyword matlabFunc accumarray bsxfun cross dot kron tril triu
 "Array Manipulation
-syn keyword matlabFunc circshift flipdim fliplr flipud horzcat inline repmat rot90 shiftdim vectorize vertcat 
+syn keyword matlabFunc circshift flipdim fliplr flipud horzcat inline repmat rot90 shiftdim vectorize vertcat
 "Specialized Matrices
 syn keyword matlabFunc compan gallery hadamard hankel hilb invhilb magic pascal rosser toeplitz vander wilkinson
 "Matrix Analysis
 syn keyword matlabFunc cond condeig det norm normest null orth rank rcond rref subspace trace
 "Linear Equations
-syn keyword matlabFunc chol cholinc condest funm ilu inv linsolve lscov lsqnonneg lu luinc pinv qr 
+syn keyword matlabFunc chol cholinc condest funm ilu inv linsolve lscov lsqnonneg lu luinc pinv qr
 "Eigenvalues and Singular Values
 syn keyword matlabFunc balance cdf2rdf eig eigs gsvd hess ordeig ordqz ordschur rsf2csf schur sqrtm ss2tf svd svds
 "Matrix Logarithms and Exponentials
-syn keyword matlabFunc expm logm 
+syn keyword matlabFunc expm logm
 "Factorization
-syn keyword matlabFunc cholupdate planerot qrdelete qrinsert qrupdate qz 
+syn keyword matlabFunc cholupdate planerot qrdelete qrinsert qrupdate qz
 "Interpolation
-syn keyword matlabFunc griddata griddata3 griddatan interp1q interpft mkpp padecoef pchip ppval spline unmkpp 
+syn keyword matlabFunc griddata griddata3 griddatan interp1q interpft mkpp padecoef pchip ppval spline unmkpp
 "Delaunay Triangulation and Tessellation
-syn keyword matlabFunc tetramesh trimesh triplot trisurf 
+syn keyword matlabFunc tetramesh trimesh triplot trisurf
 "Convex Hull
-syn keyword matlabFunc convhulln	
+syn keyword matlabFunc convhulln
 "Voronoi Diagrams
 syn keyword matlabFunc voronoin
 "Cartesian Coordinate System Conversion
-syn keyword matlabFunc cart2pol cart2sph pol2cart sph2cart 
+syn keyword matlabFunc cart2pol cart2sph pol2cart sph2cart
 "Ordinary Differential Equations (IVP)
 syn keyword matlabFunc decic deval ode15i ode23 ode45 ode113 ode15s ode23s ode23t ode23tb odefile odeget odeset odextend
 "Delay Differential Equations
-syn keyword matlabFunc dde23 ddeget ddesd ddeset 
+syn keyword matlabFunc dde23 ddeget ddesd ddeset
 "Boundary Value Problems
 syn keyword matlabFunc bvp4c bvp5c bvpget bvpinit bvpset bvpxtend
 "Partial Differential Equations
-syn keyword matlabFunc pdepe pdeval 
+syn keyword matlabFunc pdepe pdeval
 "Optimization
 syn keyword matlabFunc fminbnd fminsearch fzero optimget optimset
 "Numerical Integration (Quadrature)
@@ -234,15 +234,15 @@ syn keyword matlabFunc spdiags speye sprand sprandn sprandsym
 "Full to Sparse Conversion
 syn keyword matlabFunc full sparse spconvert
 "Working with Sparse Matrices
-syn keyword matlabFunc nnz nonzeros nzmax spalloc spfun spones spparms spy 
+syn keyword matlabFunc nnz nonzeros nzmax spalloc spfun spones spparms spy
 "Reordering Algorithms
-syn keyword matlabFunc amd colamd colperm dmperm ldl randperm symamd symrcm 
+syn keyword matlabFunc amd colamd colperm dmperm ldl randperm symamd symrcm
 "Linear Algebra
-syn keyword matlabFunc spaugment sprank 
+syn keyword matlabFunc spaugment sprank
 "Linear Equations (Iterative Methods)
-syn keyword matlabFunc bicg bicgstab cgs gmres lsqr minres pcg qmr symmlq 
+syn keyword matlabFunc bicg bicgstab cgs gmres lsqr minres pcg qmr symmlq
 "Tree Operations
-syn keyword matlabFunc etree etreeplot gplot symbfact treelayout treeplot 
+syn keyword matlabFunc etree etreeplot gplot symbfact treelayout treeplot
 "Timeseries
 "General Purpose
 syn keyword matlabFunc getdatasamplesize getqualitydesc timeseries tsprops tstool
@@ -259,7 +259,7 @@ syn keyword matlabFunc tscollection
 "Data Manipulation
 syn keyword matlabFunc addsampletocollection addts delsamplefromcollection gettimeseriesnames removets settimeseriesnames
 "Set Functions
-syn keyword matlabFunc intersect ismember issorted setdiff setxor union unique 
+syn keyword matlabFunc intersect ismember issorted setdiff setxor union unique
 "Date and Time Functions
 syn keyword matlabFunc addtodate calendar clock cputime date datenum datevec eomday etime now weekday
 "M-File Functions and Scripts
@@ -269,7 +269,7 @@ syn keyword matlabFunc varargin varargout
 "Evaluation of Expressions and Functions
 syn keyword matlabFunc ans assert builtin pause run script symvar
 "Timer Functions
-syn keyword matlabFunc isvalid start startat stop timer timerfind timerfindall wait 
+syn keyword matlabFunc isvalid start startat stop timer timerfind timerfindall wait
 "Variables and Functions in Memory
 syn keyword matlabFunc assignin datatipinfo genvarname isglobal memory mislocked mlock munlock pack
 "Control Flow
@@ -277,17 +277,17 @@ syn keyword matlabFunc parfor
 "Error Handling
 syn keyword matlabFunc addCause error ferror getReport last lasterr lasterror lastwarn warning
 "Classes and Objects
-syn keyword matlabFunc addlistener addprop dynamicprops 
+syn keyword matlabFunc addlistener addprop dynamicprops
 "events 	Display class event names
-syn keyword matlabFunc findprop getdisp handle hgsetget inferiorto loadobj metaclass notify saveobj setdisp subsasgn subsindex subsref substruct superiorto 
+syn keyword matlabFunc findprop getdisp handle hgsetget inferiorto loadobj metaclass notify saveobj setdisp subsasgn subsindex subsref substruct superiorto
 "File Name Construction
-syn keyword matlabFunc filemarker fileparts filesep fullfile tempdir tempname 
+syn keyword matlabFunc filemarker fileparts filesep fullfile tempdir tempname
 "Opening, Loading, Saving Files
-syn keyword matlabFunc daqread filehandle importdata load open save uiimport winopen 
+syn keyword matlabFunc daqread filehandle importdata load open save uiimport winopen
 "Memory Mapping
 syn keyword matlabFunc memmapfile
 "Low-Level File I/O
-syn keyword matlabFunc fclose feof fgetl fgets fopen fprintf fread frewind fscanf fseek ftell fwrite 
+syn keyword matlabFunc fclose feof fgetl fgets fopen fprintf fread frewind fscanf fseek ftell fwrite
 
 "Text Files
 syn keyword matlabFunc csvread csvwrite dlmread dlmwrite textread textscan
@@ -298,58 +298,58 @@ syn keyword matlabFunc xlsfinfo xlsread xlswrite
 "Lotus 1-2-3 Functions
 syn keyword matlabFunc wk1finfo wk1read wk1write
 "Common Data Format (CDF)
-syn keyword matlabFunc cdfepoch cdfinfo cdfread cdfwrite todatenum 
+syn keyword matlabFunc cdfepoch cdfinfo cdfread cdfwrite todatenum
 "Flexible Image Transport System
-syn keyword matlabFunc fitsinfo fitsread 
+syn keyword matlabFunc fitsinfo fitsread
 "Hierarchical Data Format (HDF)
-syn keyword matlabFunc hdf hdf5 hdf5info hdf5read hdf5write hdfinfo hdfread hdftool 
+syn keyword matlabFunc hdf hdf5 hdf5info hdf5read hdf5write hdfinfo hdfread hdftool
 "Band-Interleaved Data
-syn keyword matlabFunc multibandread multibandwrite 
+syn keyword matlabFunc multibandread multibandwrite
 
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
 if version >= 508 || !exists("did_matlab_syntax_inits")
-  if version < 508
-    let did_matlab_syntax_inits = 1
-    command -nargs=+ HiLink hi link <args>
-  else
-    command -nargs=+ HiLink hi def link <args>
-  endif
+	if version < 508
+		let did_matlab_syntax_inits = 1
+		command -nargs=+ HiLink hi link <args>
+	else
+		command -nargs=+ HiLink hi def link <args>
+	endif
 
-  HiLink matlabTransposeOperator	matlabOperator
-  HiLink matlabLineContinuation		Special
-  HiLink matlabLabel			Label
-  HiLink matlabConditional		Conditional
-  HiLink matlabRepeat			Repeat
-  HiLink matlabTodo			Todo
-  HiLink matlabString			String
-  HiLink matlabDelimiter		Identifier
-  HiLink matlabTransposeOther		Identifier
-  HiLink matlabNumber			Number
-  HiLink matlabFloat			Float
-  HiLink matlabConstant			Constant
-  HiLink matlabImplicit			matlabStatement
-  HiLink matlabStatement		Statement
-  HiLink matlabSemicolon		SpecialChar
-  HiLink matlabComment			Comment
-  HiLink matlabBlockComment		Comment
-  HiLink matlabImport			Include
-  HiLink matlabBoolean			Boolean
-  HiLink matlabStorageClass		StorageClass
+	HiLink matlabTransposeOperator	matlabOperator
+	HiLink matlabLineContinuation		Special
+	HiLink matlabLabel			Label
+	HiLink matlabConditional		Conditional
+	HiLink matlabRepeat			Repeat
+	HiLink matlabTodo			Todo
+	HiLink matlabString			String
+	HiLink matlabDelimiter		Identifier
+	HiLink matlabTransposeOther		Identifier
+	HiLink matlabNumber			Number
+	HiLink matlabFloat			Float
+	HiLink matlabConstant			Constant
+	HiLink matlabImplicit			matlabStatement
+	HiLink matlabStatement		Statement
+	HiLink matlabSemicolon		SpecialChar
+	HiLink matlabComment			Comment
+	HiLink matlabBlockComment		Comment
+	HiLink matlabImport			Include
+	HiLink matlabBoolean			Boolean
+	HiLink matlabStorageClass		StorageClass
 
-  HiLink matlabArithmeticOperator	matlabOperator
-  HiLink matlabRelationalOperator	matlabOperator
-  HiLink matlabLogicalOperator		matlabOperator
-  HiLink matlabOperator			Operator
-  HiLink matlabExceptions		Exception
-  HiLink matlabFunc			Function
+	HiLink matlabArithmeticOperator	matlabOperator
+	HiLink matlabRelationalOperator	matlabOperator
+	HiLink matlabLogicalOperator		matlabOperator
+	HiLink matlabOperator			Operator
+	HiLink matlabExceptions		Exception
+	HiLink matlabFunc			Function
 
-"optional highlighting
-  "HiLink matlabIdentifier		Identifier
-  "HiLink matlabTab			Error
-  delcommand HiLink
+	"optional highlighting
+	"HiLink matlabIdentifier		Identifier
+	"HiLink matlabTab			Error
+	delcommand HiLink
 endif
 
 let b:current_syntax = "matlab"
