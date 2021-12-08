@@ -18,7 +18,7 @@ endif
 syn keyword matlabStatement		return function
 syn keyword matlabConditional		switch case else elseif end if otherwise break continue
 syn keyword matlabRepeat		do for while
-syn keyword matlabStorageClass		classdef methods properties events persistent global
+syn keyword matlabStorageClass		classdef methods properties events persistent global arguments
 syn keyword matlabExceptions		try catch rethrow throw
 
 syn keyword matlabTodo			contained  TODO NOTE FIXME XXX
